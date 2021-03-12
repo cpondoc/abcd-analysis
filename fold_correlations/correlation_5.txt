@@ -1,0 +1,6 @@
+Correlation of total fold 5: -0.5200429252290154
+P-Value of total fold 5: -0.5200429252290154
+Correlation of male fold 5: -0.27994389863139574
+P-Value of male fold 5: -0.27994389863139574
+Correlation of female fold 5: -0.20629047605208495
+P-Value of female fold 5: -0.20629047605208495
