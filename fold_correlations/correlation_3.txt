@@ -1,6 +1,6 @@
 Correlation of total fold 3: -0.508887593872435
-P-Value of total fold 3: -0.508887593872435
+P-Value of total fold 3: 5.033181896101005e-108
 Correlation of male fold 3: -0.23743299151704622
-P-Value of male fold 3: -0.23743299151704622
+P-Value of male fold 3: 2.270555384840208e-12
 Correlation of female fold 3: -0.27994103229668255
-P-Value of female fold 3: -0.27994103229668255
+P-Value of female fold 3: 1.786415103014528e-15
