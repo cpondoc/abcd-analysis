@@ -1,0 +1,12 @@
+Correlation of total fold 4: -0.5316711666476204
+P-Value of total fold 4: 1.8512114303017366e-119
+Correlation of male fold 4: -0.3555991377107306
+P-Value of male fold 4: 1.1175471396187561e-26
+Correlation of female fold 4: -0.2384749528577544
+P-Value of female fold 4: 1.507861124473218e-11
+Correlation of total fold 4: -0.5278395720287504
+P-Value of total fold 4: 1.833034451482625e-117
+Correlation of male fold 4: -0.327400622057271
+P-Value of male fold 4: 1.2294683651367204e-22
+Correlation of female fold 4: -0.2524550540868702
+P-Value of female fold 4: 8.33085191996715e-13
