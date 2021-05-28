@@ -7,9 +7,10 @@ Work with Dr. Qingyu Zhao at Stanford Computational Neuroscience Lab.
 - Given that there was a correlation, I then designed a machine learning algorithm to train on a matched pairs dataset, ensuring that the effect of the head size in training was mitigated.
 
 ## Notebooks
-- Correlation Graph: Contains info related to looking at the correlation between head size and sex.
-- Box Plot: Contains info related to looking at the distribution of prediction scores. Making sure model does or does not need to be trained again.
-- Accuracy Logger: Tracks all of the important metrics from the training of the network. Helpful for ensuring model works.
+- `Correlation Graph.ipynb`: Contains info related to looking at the correlation between head size and sex. Also outputs numerical results to .txt file to get p-value.
+- `Box Plot.ipynb`: Contains info related to looking at the distribution of prediction scores. Making sure model does or does not need to be trained again. Now uses a jitterplot with Seaborn in order to visualize the data.
+- `Accuracy Logger.ipynb`: Tracks all of the important metrics from the training of the network. Helpful for ensuring model works.
+- `Head Size Distribution.ipynb`: View the result of creating the matched pairs dataset, in order to verify data is balanced!
 
 ## Scripts
 - `compare_sexes.m`: used to create the matched pairs training dataset, given all of the data points from the ABCD study. Modified by Chris Pondoc to add extra data regarding head size, so final histogram of head sizes of each gender transposed onto one another could be generated.
