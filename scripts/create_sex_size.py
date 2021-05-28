@@ -1,8 +1,11 @@
 """
+Written by: Christopher Pondoc
 This file creates the individual .csv file containing head sizes in one column
-and the sex label ('0' or '1') in the other column.
+and the sex label ('0' or '1') in the other column. Used to provide data that is
+readable under the `compare_sexes.m` script.
 """
 
+# Helpfulf or parsing in data
 import csv
 
 """
@@ -48,6 +51,7 @@ def create_file(head_sizes, sexes):
         for i in range(0, len(sexes)):
             sex_size_writer.writerow([head_sizes[i], sexes[i]])
 
+""" Run all pertinent functions """
 if __name__ == '__main__':
     subject_ids, head_sizes = get_data()
     sexes = get_sexes(subject_ids)
