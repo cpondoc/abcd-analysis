@@ -8,3 +8,4 @@ Work with Dr. Qingyu Zhao at Stanford Computational Neuroscience Lab.
 
 ## Scripts
 - `compare_sexes.m` -- used to create the matched pairs training dataset, given all of the data points from the ABCD study. Modified by Chris Pondoc to add extra data regarding head size, so final histogram of head sizes of each gender transposed onto one another could be generated.
+- `correct_correlation.py` -- supplementary script used to visualize correlation, by splitting by sex, corresponding with the head sizes, and then viewing the jitter plot.
