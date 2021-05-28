@@ -1,5 +1,16 @@
+"""
+Written by: Christopher Pondoc
+This file correctly visualizes the correlation using seaborn in order to get an idea of the correlation
+between sex, head size, and prediction scores. The program specifically utilizes a jitterplot in order to
+accomplish its task.
+"""
+
+# Needed to parse thorugh csv and data
 import csv
 import numpy as np
+import seaborn as sns
+
+""" Get data ids """
 def get_ids(fold_num):
     file_name = "/Users/cpondoc/Documents/qingyu_data/res/subject_ids/subid_" + str(fold_num) + ".txt" 
     subject_ids_file = open(file_name, mode='r')
@@ -10,6 +21,7 @@ def get_ids(fold_num):
         subject_ids.append(line[:-1])
     return subject_ids
 
+""" Get sexes from each of the subject ids """
 def get_sexes(subject_ids):
     sexes = [None] * len(subject_ids)
     with open('/Users/cpondoc/Documents/qingyu_data/reference/abcd_ssphp01.csv') as all_info_file:
@@ -26,6 +38,7 @@ def get_sexes(subject_ids):
                 num_lines += 1
         return sexes
 
+""" Get corresponding predictions given fold number and unflipped predictions """
 def get_predictions(fold_num, flip):
     file_name = ""
     if (flip):
@@ -40,6 +53,7 @@ def get_predictions(fold_num, flip):
         predictions.append(float(line))
     return predictions
 
+""" Splitting scores and other data by sex (male and female) """
 def split_by_sex(sexes, predictions):
     male_scores = []
     female_scores = []
@@ -50,16 +64,16 @@ def split_by_sex(sexes, predictions):
             female_scores.append(predictions[i])
     return male_scores, female_scores
 
-import seaborn as sns
+""" Plot Jitterplot using seaborn """
 def plot_jitterplot(prediction, sex, type):
     prediction_np = np.array(prediction).astype(np.float)
     sns.set_theme(style="whitegrid")
     ax = sns.stripplot(y=prediction_np[:100]).set(title=sex + ' Prediction Scores (all Folds) - ' + type, ylabel='Prediction Score')
 
-subject_ids = get_ids(1)
-sexes = get_sexes(subject_ids)
-predictions = get_predictions(1, False)
-male_scores, female_scores = split_by_sex(sexes, predictions)
-plot_jitterplot(male_scores, "Male", "1")
-
-#print(sexes)
+""" Call all pertinent functions """
+if __name__ == "__main__":
+    subject_ids = get_ids(1)
+    sexes = get_sexes(subject_ids)
+    predictions = get_predictions(1, False)
+    male_scores, female_scores = split_by_sex(sexes, predictions)
+    plot_jitterplot(male_scores, "Male", "1")
