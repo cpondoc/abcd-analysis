@@ -1,6 +1,14 @@
+"""
+Written by: Christopher Pondoc
+Used to visualize training results
+"""
+
+# Important for visualization, parsing through data, etc.
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
+
+""" Getting data from file """
 with open('/Users/cpondoc/Documents/qingyu_data/scripts/fold_1_results.txt') as size_file:
     data = []
     head_reader = csv.reader(size_file, delimiter=',')
@@ -11,6 +19,7 @@ with open('/Users/cpondoc/Documents/qingyu_data/scripts/fold_1_results.txt') as 
         else:
             data.append(row)
 
+""" Categorizing all of data """
 epochs = []
 acc_numbers = []
 first_test_accs = []
@@ -30,6 +39,7 @@ for row in data:
     number = float(row[0][acc_number + 5:])
     acc_numbers.append(number)
 
+""" Graphing corresponding values """
 def graph_vals():
     ref_np = np.array(epochs).astype(np.float)
     values_np = np.array(acc_numbers).astype(np.float)
