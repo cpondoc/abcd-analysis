@@ -11,4 +11,5 @@ Work with Dr. Qingyu Zhao at Stanford Computational Neuroscience Lab.
 - `create_sex_size.py`: used to create the file that is fed into `compare_sexes.m` in order to be able to get the matched pairs dataset. Specifically, the script creates the individual .csv file containing head size in one column and the sex lable ('0' or '1') in the other column.
 - `get_data_ids.py`: used to get corresponding data ids for a selected dataset. Helper script!
 - `split_training.py`: A hacky solution to parsing the data from the training results from the NN. Simply more of a sandbox file.
+- `print_results.py`: Companion to graph results. Helper script!
 - `correct_correlation.py`: supplementary script used to visualize correlation, by splitting by sex, corresponding with the head sizes, and then viewing the jitter plot.
