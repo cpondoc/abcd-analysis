@@ -1,6 +1,11 @@
 # ABCD Data Analysis
 Work with Dr. Qingyu Zhao at Stanford Computational Neuroscience Lab.
 
+## Introduction
+- My research study involves examining data utilized for the publication “Deep learning identifies morphological determinants of sex differences in the pre-adolescent brain” and determining if the head size disparities amongst males and females was a confounding variable in the training of the CNN.
+- Note: Males tend to have larger head sizes than females
+- Given that there was a correlation, I then designed a machine learning algorithm to train on a matched pairs dataset, ensuring that the effect of the head size in training was mitigated.
+
 ## Notebooks
 - Correlation Graph: Contains info related to looking at the correlation between head size and sex.
 - Box Plot: Contains info related to looking at the distribution of prediction scores. Making sure model does or does not need to be trained again.
