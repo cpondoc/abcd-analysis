@@ -1,7 +1,9 @@
 """
+Written by: Christopher Pondoc
 This file gets all of the corresponding data ids for the selected dataset
 """
 
+# Helpful for parsing scripts
 import csv
 
 """
@@ -64,10 +66,12 @@ def create_file(matched_ids, matched_sizes, matched_sexes):
         for i in range(0, len(matched_ids)):
             matched_pairs_writer.writerow([matched_ids[i], matched_sizes[i], matched_sexes[i]])
 
-subject_ids, head_sizes = get_data()
-z_scores = get_z_score(head_sizes)
-matched_ids, matched_sizes, matched_sexes = get_matched_pairs(
-    z_scores, subject_ids, head_sizes
-)
-create_file(matched_ids, matched_sizes, matched_sexes)
+""" Run all pertinent functions """
+if __name__ == '__main__':
+    subject_ids, head_sizes = get_data()
+    z_scores = get_z_score(head_sizes)
+    matched_ids, matched_sizes, matched_sexes = get_matched_pairs(
+        z_scores, subject_ids, head_sizes
+    )
+    create_file(matched_ids, matched_sizes, matched_sexes)
 
